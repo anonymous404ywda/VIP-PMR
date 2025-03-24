@@ -1,71 +1,85 @@
-/* Background dengan efek gradasi gelap */
+/* Background dengan efek gradasi dan animasi */
 body {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e90ff, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animasi background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Container login */
 .login-container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
     text-align: center;
-    width: 300px;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Efek glow pada teks */
 .glow-text {
     color: #fff;
-    font-size: 24px;
-    text-shadow: 0px 0px 10px cyan;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
 }
 
 /* Input field */
 input {
     width: 90%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     outline: none;
-    background: #222;
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek glow saat input aktif */
+input:focus {
+    box-shadow: 0px 0px 15px cyan;
 }
 
 /* Tombol login */
 button {
     width: 100%;
-    padding: 10px;
-    background: cyan;
-    color: black;
+    padding: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    box-shadow: 0px 0px 10px cyan;
+    box-shadow: 0px 0px 15px cyan;
     transition: all 0.3s ease-in-out;
 }
 
 /* Efek hover tombol */
 button:hover {
-    background: #00ffea;
-    box-shadow: 0px 0px 20px cyan;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    box-shadow: 0px 0px 20px rgba(255, 0, 128, 0.8);
 }
 
 /* Animasi masuk */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.login-container {
-    animation: fadeIn 0.8s ease-in-out;
 }

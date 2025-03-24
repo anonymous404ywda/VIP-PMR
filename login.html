@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,14 @@
         function cekLogin(event) {
             event.preventDefault(); // Mencegah form mengirimkan POST request
 
-            let username = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            console.log("Username yang dimasukkan:", username); // Debugging
+            console.log("Password yang dimasukkan:", password);
 
             // Username dan Password yang benar
-            if (username === "admin" && password === "1234") {
+            if (username === "Antoo" && password === "ANONYMOUS") {
                 alert("Login Berhasil!");
                 window.location.href = "dashboard.html"; // Pindah ke dashboard
             } else {
@@ -25,7 +28,7 @@
 <body>
     <div class="container">
         <h1>Login Admin</h1>
-        <form onsubmit="cekLogin(event)">  <!-- Menggunakan JavaScript -->
+        <form onsubmit="cekLogin(event)">  
             <input type="text" id="username" placeholder="Username" required><br><br>
             <input type="password" id="password" placeholder="Password" required><br><br>
             <button type="submit">Login</button>

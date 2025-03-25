@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Warna latar belakang gelap */
+    color: #ffffff; /* Warna teks putih */
+    line-height: 1.6;
+}
+
+header {
+    background: #1e1e1e; /* Warna latar belakang header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Warna saat hover */
+    text-shadow: 0 0 10px #00bcd4; /* Efek glow saat hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00bcd4; /* Warna border */
+    border-radius: 5px;
+    background: #2a2a2a; /* Warna latar belakang input */
+    color: #ffffff; /* Warna teks input */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #00bcd4; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00bcd4; /* Warna latar belakang tombol */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Warna teks tombol */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #0097a7; /* Warna saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.error-message {
+    color: red; /* Warna pesan kesalahan */
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1e1e1e;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
